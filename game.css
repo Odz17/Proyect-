@@ -1,0 +1,54 @@
+body {
+    font-family: fantasy;
+    text-align: center;
+    background: url("./Images/background.jpg");
+    background-size: cover;
+}
+
+#board {
+    width: 540px;
+    height: 540px;
+    background-color: whitesmoke; 
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    background: url("./Images/soil.png");
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 25px;
+}
+
+#board div {
+    
+    width: 180px; 
+    height: 180px;
+    background-image: url("./hole.png");
+    background-size: cover;
+}
+
+#board div img {
+    
+    width: 100px;
+    height: 100px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#Start-Game {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    justify-content: center;
+    align-content: center;
+    display: flex; 
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
