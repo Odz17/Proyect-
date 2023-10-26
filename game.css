@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: fantasy;
     text-align: center;
     background: url("./Images/background.jpg");
     background-size: cover;
@@ -38,4 +38,17 @@ body {
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+#Start-Game {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    justify-content: center;
+    align-content: center;
+    display: flex; 
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
 }
