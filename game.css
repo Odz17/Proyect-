@@ -1,5 +1,8 @@
 body {
-    font-family: fantasy;
+    font-family: 'Atari Classic Smooth';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
     text-align: center;
     background: url("./Images/background.jpg");
     background-size: cover;
