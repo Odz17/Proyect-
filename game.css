@@ -1,9 +1,14 @@
 body {
     font-family: fantasy;
     text-align: center;
-    background: url("./Images/background.jpg");
-    background-size: cover;
-}
+        height: 100%;
+        margin: 0;
+        background: url("./Images/background_TJ.jpg") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
 
 #board {
     width: 540px;
@@ -14,7 +19,7 @@ body {
     display: flex;
     flex-wrap: wrap;
 
-    background: url("./Images/soil.png");
+    background: url("./Images/sample/soil.png");
     background-size: cover;
     border: 3px solid white;
     border-radius: 25px;
@@ -24,7 +29,7 @@ body {
     
     width: 180px; 
     height: 180px;
-    background-image: url("./Images/hole.png");
+    background-image: url("./Images/sample/hole.png");
     background-size: cover;
 }
 
@@ -40,7 +45,7 @@ body {
     -ms-user-select: none;
 }
 
-#Start-Game {
+/* #Start-Game {
     width: 50px;
     height: 50px;
     background-color: black;
@@ -51,4 +56,4 @@ body {
     display: flex;
     flex-wrap: wrap;
 
-}
+} */

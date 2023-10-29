@@ -21,7 +21,7 @@ class Game {
         let num = Math.floor(Math.random() * 9);
         return num.toString();
     }
-
+// JERRY
     setMole() {
         if (this.gameOver) {
             return;
@@ -30,7 +30,7 @@ class Game {
             this.currMoleTile.innerHTML = "";
         }
         let mole = document.createElement("img");
-        mole.src = "./monty-mole.png";
+        mole.src = "./Images/jerry_1.png";
 
         let num = this.getRandomTile();
         if (this.currPlantTile && this.currPlantTile.id == num) {
@@ -39,7 +39,7 @@ class Game {
         this.currMoleTile = document.getElementById(num);
         this.currMoleTile.appendChild(mole);
     }
-
+// TOM
     setPlant() {
         if (this.gameOver) {
             return;
@@ -48,7 +48,7 @@ class Game {
             this.currPlantTile.innerHTML = "";
         }
         let plant = document.createElement("img");
-        plant.src = "./piranha-plant.png";
+        plant.src = "./Images/tom.png";
         
         let num = this.getRandomTile();
         if (this.currMoleTile && this.currMoleTile.id == num) {
