@@ -14,7 +14,7 @@ class Game {
             document.getElementById("board").appendChild(tile);
         }
         setInterval(this.setMole.bind(this), 1000);
-        setInterval(this.setPlant.bind(this), 2000);
+        setInterval(this.setPlant.bind(this), 1250);
     }
 
     getRandomTile() {
