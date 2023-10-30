@@ -65,11 +65,11 @@ class Game {
             return;
         }
         
-        if (event.target == this.currTomTile.firstChild) {
+        if (event.target == this.currJerryTile) {
             this.score += 10;
             document.getElementById("score").innerText = this.score.toString();
             
-        } else if (event.target == this.currJerryTile.firstChild) {
+        } else if (event.target == this.currTomTile) {
             document.getElementById("score").innerText = "GAME OVER: " + this.score.toString();
             this.gameOver = true;
             
