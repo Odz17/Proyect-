@@ -61,6 +61,7 @@ class Game {
 
     selectTile(event) {
         if (this.gameOver) {
+            console.log("selectTile was called");
             return;
         }
         
