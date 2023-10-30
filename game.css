@@ -1,5 +1,8 @@
 body {
-    font-family: fantasy;
+    font-family: 'Atari Classic Smooth';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
     text-align: center;
     height: 100%;
     margin: 0;
