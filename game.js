@@ -1,7 +1,7 @@
 class Game {
     constructor() {
-        this.currMoleTile = null;
-        this.currPlantTile = null;
+        this.currJerryTile = null;
+        this.currTomTile = null;
         this.score = 0;
         this.gameOver = false;
     }
@@ -13,50 +13,50 @@ class Game {
             tile.addEventListener("click", this.selectTile.bind(this));
             document.getElementById("board").appendChild(tile);
         }
-        setInterval(this.setMole.bind(this), 1000);
-        setInterval(this.setPlant.bind(this), 1250);
+        setInterval(this.setJerry.bind(this), 1000);
+        setInterval(this.setTom.bind(this), 1250);
     }
 
     getRandomTile() {
         let num = Math.floor(Math.random() * 9);
         return num.toString();
     }
-
-    setMole() {
+// JERRY
+    setJerry() {
         if (this.gameOver) {
             return;
         }
-        if (this.currMoleTile) {
-            this.currMoleTile.innerHTML = "";
+        if (this.currJerryTile) {
+            this.currJerryTile.innerHTML = "";
         }
-        let mole = document.createElement("img");
-        mole.src = "./monty-mole.png";
+        let Jerry = document.createElement("img");
+        Jerry.src = "./Images/jerry_1.png";
 
         let num = this.getRandomTile();
-        if (this.currPlantTile && this.currPlantTile.id == num) {
+        if (this.currTomTile && this.currTomTile.id == num) {
             return;
         }
-        this.currMoleTile = document.getElementById(num);
-        this.currMoleTile.appendChild(mole);
+        this.currJerryTile = document.getElementById(num);
+        this.currJerryTile.appendChild(Jerry);
     }
-
-    setPlant() {
+// TOM
+    setTom() {
         if (this.gameOver) {
             return;
         }
-        if (this.currPlantTile) {
-            this.currPlantTile.innerHTML = "";
+        if (this.currTomTile) {
+            this.currTomTile.innerHTML = "";
         }
-        let plant = document.createElement("img");
-        plant.src = "./piranha-plant.png";
+        let tom = document.createElement("img");
+        tom.src = "./Images/tom.png";
         
         let num = this.getRandomTile();
-        if (this.currMoleTile && this.currMoleTile.id == num) {
+        if (this.currJerryTile && this.currJerryTile.id == num) {
             return;
         }
         
-        this.currPlantTile = document.getElementById(num);
-        this.currPlantTile.appendChild(plant);
+        this.currTomTile = document.getElementById(num);
+        this.currTomTile.appendChild(tom);
     }
 
     selectTile(event) {
@@ -64,11 +64,11 @@ class Game {
             return;
         }
         
-        if (event.target == this.currMoleTile) {
+        if (event.target == this.currJerryTile) {
             this.score += 10;
             document.getElementById("score").innerText = this.score.toString();
             
-        } else if (event.target == this.currPlantTile) {
+        } else if (event.target == this.currTomTile) {
             document.getElementById("score").innerText = "GAME OVER: " + this.score.toString();
             this.gameOver = true;
             
