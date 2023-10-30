@@ -1,5 +1,5 @@
 body, html {
-    font-family: fantasy;
+    font-family: 'Atari Classic Smooth';
     text-align: center;
         height: 100%;
         margin: 0;
@@ -27,15 +27,15 @@ body, html {
         background-color: rgba(222, 0, 0, 0.816);
         color: white;
         border: 10px;
-        padding-top: 9px;
-        padding-bottom: 9px;
-        padding-right: 7px;
-        padding-left: 7px;
-        font-size: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 30px;
+        padding-left: 30px;
+        font-size: 17px;
         border: none;
         cursor: pointer;
         border-radius: 12px;
-        box-shadow: 0 3px #6e6d6d; /* Agrega sombra al botón */
+        box-shadow: 0 3px #ffffff; /* Agrega sombra al botón */
     }
     
     #startButton:hover { /* Cambia el color de fondo cuando pasas el ratón por encima */
@@ -43,7 +43,7 @@ body, html {
     }
     
     #startButton:active { /* Simula un efecto de presión cuando se hace clic en el botón */
-        box-shadow: 0 3px #666;
+        box-shadow: 0 3px #ffffff;
         transform: translateY(4px);
     }
     

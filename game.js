@@ -23,7 +23,7 @@ class Game {
     }
 // JERRY
     setJerry() {
-        if (this.gameOver) {
+        if (this.gameOver || this.score >= 30) {
             return;
         }
         if (this.currJerryTile) {
@@ -41,7 +41,7 @@ class Game {
     }
 // TOM
     setTom() {
-        if (this.gameOver) {
+        if (this.gameOver || this.score >= 30) {
             return;
         }
         if (this.currTomTile) {
@@ -67,15 +67,54 @@ class Game {
         
         if (event.target == this.currTomTile.firstChild) {
             this.score += 10;
+            
+            if (this.score >= 30) {
+                scoreReached();
+            }
+
             document.getElementById("score").innerText = this.score.toString();
+            function scoreReached() {
+                let boardDivs = document.querySelectorAll("#board div");
+                let boardImgs = document.querySelectorAll("#board div img");
+            
+                boardDivs.forEach(function(div) {
+                    div.style.backgroundImage = "none";
+                });
+            
+                boardImgs.forEach(function(img) {
+                    img.style.width = "0";
+                    img.style.height = "0";
+                });
+            
+                document.getElementById("board").style.backgroundImage = "url('./Images/tom_magnifico.gif')";
+            }
+
             
         } else if (event.target == this.currJerryTile.firstChild) {
             document.getElementById("score").innerText = "GAME OVER: " + this.score.toString();
             this.gameOver = true;
+
+            function gameOver() {
+                let boardDivs = document.querySelectorAll("#board div");
+                let boardImgs = document.querySelectorAll("#board div img");
+
+             boardDivs.forEach(function(div) {
+             div.style.backgroundImage = "none";
+    });
+
+            boardImgs.forEach(function(img) {
+            img.style.width = "0";
+            img.style.height = "0";
+    });
+                document.getElementById("board").style.backgroundImage = "url('./Images/jerry_splash.gif')";
+            }
+
+            gameOver();
             
         }
     }
 }
+
 
 window.onload = function() {
     let game = new Game();
