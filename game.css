@@ -22,9 +22,11 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 
     background: url("./Images/background_hole.png");
     background-size: cover;
+    background-position: 63% 37%;
     border: 3px solid white;
     border-radius: 25px;
 }

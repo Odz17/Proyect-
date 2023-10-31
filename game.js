@@ -23,7 +23,7 @@ class Game {
     }
 // JERRY
     setJerry() {
-        if (this.gameOver || this.score >= 30) {
+        if (this.gameOver || this.score >= 50) {
             return;
         }
         if (this.currJerryTile) {
@@ -41,7 +41,7 @@ class Game {
     }
 // TOM
     setTom() {
-        if (this.gameOver || this.score >= 30) {
+        if (this.gameOver || this.score >= 50) {
             return;
         }
         if (this.currTomTile) {
@@ -61,14 +61,13 @@ class Game {
 
     selectTile(event) {
         if (this.gameOver) {
-            console.log("selectTile was called");
             return;
         }
         
         if (event.target == this.currTomTile.firstChild) {
             this.score += 10;
             
-            if (this.score >= 30) {
+            if (this.score >= 50) {
                 scoreReached();
             }
 
@@ -87,6 +86,11 @@ class Game {
                 });
             
                 document.getElementById("board").style.backgroundImage = "url('./Images/tom_magnifico.gif')";
+                
+                setTimeout(function() {
+                    window.location.href = "index.html";
+                }, 5000);
+
             }
 
             
@@ -107,14 +111,18 @@ class Game {
             img.style.height = "0";
     });
                 document.getElementById("board").style.backgroundImage = "url('./Images/jerry_splash.gif')";
+                
+                setTimeout(function() {
+                    window.location.href = "index.html";
+                }, 5000);
             }
+
 
             gameOver();
             
         }
     }
 }
-
 
 window.onload = function() {
     let game = new Game();

@@ -21,7 +21,7 @@ body, html {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 70vh; /* Esto hace que el contenedor ocupe toda la altura de la ventana del navegador */
+        height: 70vh;
     }
     #startButton {
         background-color: rgba(222, 0, 0, 0.816);
@@ -35,14 +35,14 @@ body, html {
         border: none;
         cursor: pointer;
         border-radius: 12px;
-        box-shadow: 0 3px #ffffff; /* Agrega sombra al botón */
+        box-shadow: 0 3px #ffffff;
     }
     
-    #startButton:hover { /* Cambia el color de fondo cuando pasas el ratón por encima */
+    #startButton:hover {
         background-color: #ff5050;
     }
     
-    #startButton:active { /* Simula un efecto de presión cuando se hace clic en el botón */
+    #startButton:active {
         box-shadow: 0 3px #ffffff;
         transform: translateY(4px);
     }
