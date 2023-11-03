@@ -3,7 +3,6 @@ body, html {
     text-align: center;
         height: 100%;
         margin: 0;
-        /* gif */
         background: url('./Images/kiss.gif') no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
